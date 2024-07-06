@@ -45,5 +45,7 @@
 		"stdexcept": "cpp",
 		"streambuf": "cpp",
 		"typeinfo": "cpp"
-	}
+	},
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false
 }
