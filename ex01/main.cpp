@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:00 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/06 23:25:57 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/06 23:49:16 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main()
 {
 	// Crear un contacto usando el constructor parametrizado
-	Contact parametrizedContact("John", "Doe", "Johnny", "123-456-7890", "Afraid of spiders");
+	Contact parametrizedContact("John", "Doe", "Johnny", "", "Afraid of spiders");
 	std::cout << "Parametrized contact is empty: " << (parametrizedContact.isEmpty() ? "Yes" : "No") << std::endl;
 
 	// Imprimir los detalles del contacto parametrizado

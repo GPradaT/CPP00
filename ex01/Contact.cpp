@@ -6,13 +6,22 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:34:14 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/06 23:23:43 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/09 17:19:32 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 //Generating constructors
+Contact::Contact()
+{
+	setFirstName("");
+	setLastName("");
+	setNickname("");
+	setPhoneNumber("");
+	setDarkestSecret("");
+}
+
 Contact::Contact(const std::string& firstName, const std::string& lastName,
 			const std::string& nickname, const std::string& phoneNumber,
 			const std::string& darkestSecret)
@@ -22,6 +31,10 @@ Contact::Contact(const std::string& firstName, const std::string& lastName,
 	setNickname(nickname);
 	setPhoneNumber(phoneNumber);
 	setDarkestSecret(darkestSecret);
+}
+
+Contact::~Contact()
+{
 }
 
 //generating setters
@@ -79,7 +92,7 @@ std::string Contact::getDarkestSecret() const
 
 bool Contact::isEmpty() const
 {
-	return (this->firstName.size() == 0 && this->lastName.size()
-		== 0 && this->nickname.size() == 0 && this->phoneNumber.size()
-		== 0 && this->darkestSecret.size()== 0);
+	return (this->firstName.size() == 0 || this->lastName.size() == 0
+			|| this->nickname.size() == 0 || this->phoneNumber.size() == 0
+			|| this->darkestSecret.size() == 0);
 }
