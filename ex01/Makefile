@@ -6,13 +6,13 @@
 #    By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 14:55:47 by gprada-t          #+#    #+#              #
-#    Updated: 2024/07/06 23:22:00 by gprada-t         ###   ########.fr        #
+#    Updated: 2024/07/10 21:35:13 by gprada-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = test
 
-SRC = Contact.cpp main.cpp
+SRC = PhoneBook.cpp Contact.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = c++
