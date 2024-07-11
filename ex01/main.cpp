@@ -6,11 +6,12 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:00 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/10 21:23:22 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:51:04 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstdlib>
 #include "PhoneBook.hpp"
 
 int main(int argc, char **argv)
@@ -31,7 +32,7 @@ int main(int argc, char **argv)
 			std::cout << "Enter a command: ";
 			std::cin >> command;
 			if (command == "EXIT")
-				break;
+				return 0;
 			else if (command == "ADD")
 			{
 				std::string	firstName;
@@ -61,10 +62,10 @@ int main(int argc, char **argv)
 			else if (command == "SEARCH")
 			{
 				phoneBook.displayContacts();
-				std::string	index;
+				int	index;
 				std::cout << "Put index for more info: ";
 				std::cin >> index;
-				phoneBook.searchContact(std::stoi(index));
+				phoneBook.searchContact(index);
 			}
 		}
 	}

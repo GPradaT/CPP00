@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:05 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/11 14:25:32 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:35:10 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,12 @@ void	PhoneBook::printContact(const Contact& contact) const
 void	PhoneBook::displayField(std::string field) const
 {
 	for (int i = 0; i < 10; i++)
-		std::cout << field[i];
+	{
+		if (field[i])
+			std::cout << field[i];
+		else
+			std::cout << ".";
+	}
 }
 
 void	PhoneBook::displayContacts() const
