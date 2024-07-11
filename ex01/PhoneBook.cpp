@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:05 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/11 15:35:10 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:28:03 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,36 @@ void	PhoneBook::printContact(const Contact& contact) const
 
 void	PhoneBook::displayField(std::string field) const
 {
-	for (int i = 0; i < 10; i++)
+	for (size_t i = 0; i < 10; i++)
 	{
-		if (field[i])
-			std::cout << field[i];
-		else
-			std::cout << ".";
+		if (field.size() >= 10)
+		{
+			if (i == 9)
+				std::cout << ".";
+			else
+				std::cout << field[i];
+		}
+		else 
+		{
+			if (i < field.size())
+				std::cout << field[i];
+			else
+				std::cout << " ";
+		}
 	}
+	std::cout << "|";
 }
 
 void	PhoneBook::displayContacts() const
 {
-	std::cout << "INDEX" << "|";
+	displayField("INDEX");
+	displayField("FIRST NAME");
+	displayField("LAST NAME");
+	displayField("NICKNAME");
+	std::cout << std::endl;
+	for (int i = 0; i <= index; i++)
+	{
+		displayField(contacts[i].getFirstName());
+		std::cout << std::endl;
+	}
 }

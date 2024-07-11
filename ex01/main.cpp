@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:00 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/11 15:51:04 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/11 18:33:42 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int main(int argc, char **argv)
 	{
 		PhoneBook	phoneBook;
 		std::cout << "Welcome to the PhoneBook!" << std::endl;
-		while (true)
+		std::string	command;
+		while (command != "EXIT")
 		{
-			std::string	command;
 			std::cout << "Enter a command: ";
 			std::cin >> command;
 			if (command == "EXIT")
@@ -52,33 +52,19 @@ int main(int argc, char **argv)
 				std::cin >> darkestSecret;
 				Contact contact(firstName, lastName, nickname,\
 								phoneNumber, darkestSecret);
-				if (contact.isEmpty())
-				{
-					std::cout << "Contact field/s empty." << std::endl;
-					continue ;
-				}
 				phoneBook.addContact(contact);
 			}
 			else if (command == "SEARCH")
 			{
 				phoneBook.displayContacts();
-				int	index;
+				std::string	index;
 				std::cout << "Put index for more info: ";
 				std::cin >> index;
-				phoneBook.searchContact(index);
+				std::cout << index << std::endl;
+				if (index.size() < 2)
+					phoneBook.searchContact(std::atod(index));
 			}
 		}
 	}
-	// Crear un contacto usando el constructor parametrizado
-	Contact parametrizedContact("John", "Doe", "Johnny", "", "Afraid of spiders");
-	std::cout << "Parametrized contact is empty: " << (parametrizedContact.isEmpty() ? "Yes" : "No") << std::endl;
-
-	// Imprimir los detalles del contacto parametrizado
-	std::cout << "First Name: " << parametrizedContact.getFirstName() << std::endl;
-	std::cout << "Last Name: " << parametrizedContact.getLastName() << std::endl;
-	std::cout << "Nickname: " << parametrizedContact.getNickname() << std::endl;
-	std::cout << "Phone Number: " << parametrizedContact.getPhoneNumber() << std::endl;
-	std::cout << "Darkest Secret: " << parametrizedContact.getDarkestSecret() << std::endl;
-
 	return 0;
 }
