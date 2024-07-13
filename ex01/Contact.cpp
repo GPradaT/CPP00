@@ -6,13 +6,12 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:34:14 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/13 10:52:19 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:18:30 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-//Generating constructors
 Contact::Contact()
 {
 	setFirstName("");
@@ -37,7 +36,6 @@ Contact::~Contact()
 {
 }
 
-//generating setters
 void	Contact::setFirstName(const std::string& firstName)
 {
 	this->firstName = firstName;
@@ -63,7 +61,6 @@ void	Contact::setDarkestSecret(const std::string& darkestSecret)
 	this->darkestSecret = darkestSecret;
 }
 
-//generating getters
 std::string	Contact::getFirstName() const
 {
 	return this->firstName;
@@ -88,7 +85,6 @@ std::string Contact::getDarkestSecret() const
 {
 	return this->darkestSecret;
 }
-
 
 bool	Contact::isEmpty() const
 {
