@@ -6,12 +6,10 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:00 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/13 10:59:51 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:15:44 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cstdlib>
 #include "PhoneBook.hpp"
 
 int main(int argc, char **argv)

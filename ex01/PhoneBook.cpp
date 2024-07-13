@@ -6,12 +6,11 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:05 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/13 11:03:53 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:15:32 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <iostream>
 
 PhoneBook::PhoneBook()
 {

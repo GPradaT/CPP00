@@ -6,14 +6,16 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:03 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/13 10:42:09 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:15:24 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-#include "Contact.hpp"
+# include <string>
+# include <iostream>
+# include "Contact.hpp"
 
 class PhoneBook {
 	public:
