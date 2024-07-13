@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 16:05:58 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/09 20:55:29 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:52:57 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ class	Contact {
 		std::string	getNickname() const;
 		std::string	getPhoneNumber() const;
 		std::string	getDarkestSecret() const;
+
+		void		addContact();
 		bool		isEmpty() const;
-		int			index;
+		bool		wrongData() const;
 		~Contact();
 
 	private:

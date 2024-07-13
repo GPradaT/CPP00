@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:05 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/11 17:28:03 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:03:53 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,12 @@ void	PhoneBook::addContact(Contact& contact)
 {
 	if (contact.isEmpty())
 	{
-		std::cout << "Contact field/s empty" << std::endl;
+		std::cout << "Contact field/s empty." << std::endl;
+		return ;
+	}
+	if (contact.wrongData())
+	{
+		std::cout << "One of fields have unexpected format." << std::endl;
 		return ;
 	}
 	contacts[index] = contact;
@@ -84,9 +89,12 @@ void	PhoneBook::displayContacts() const
 	displayField("LAST NAME");
 	displayField("NICKNAME");
 	std::cout << std::endl;
-	for (int i = 0; i <= index; i++)
+	for (int i = 0; i < contactCount; i++)
 	{
+		std::cout << i << "         |";
 		displayField(contacts[i].getFirstName());
+		displayField(contacts[i].getLastName());
+		displayField(contacts[i].getNickname());
 		std::cout << std::endl;
 	}
 }

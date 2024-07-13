@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:34:14 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/09 17:19:32 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:52:19 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,23 @@ std::string Contact::getDarkestSecret() const
 }
 
 
-bool Contact::isEmpty() const
+bool	Contact::isEmpty() const
 {
 	return (this->firstName.size() == 0 || this->lastName.size() == 0
 			|| this->nickname.size() == 0 || this->phoneNumber.size() == 0
 			|| this->darkestSecret.size() == 0);
+}
+
+bool	Contact::wrongData() const
+{
+	if (this->firstName.size() > 15 || this->lastName.size() > 15
+		|| this->nickname.size() > 10 || this->darkestSecret.size() > 100
+		|| this->phoneNumber.size() > 12)
+		return (true);
+	for (int i = 0; i < (int)phoneNumber.length(); i++)
+	{
+		if (!isdigit(phoneNumber[i]))
+			return (true);
+	}
+	return (false);
 }
