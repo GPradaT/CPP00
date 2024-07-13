@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:44:00 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/13 12:17:06 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/13 12:45:01 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,10 @@ int main(int argc, char **argv)
 				phoneBook.searchContact(in);
 			}
 		}
-		else if (std::cin.eof())
-			break;
 		else
 			std::cout << "Invalid command, use ADD, SEARCH or EXIT." << std::endl;
+		if (std::cin.eof())
+			break;
 	}
 	return 0;
 }
